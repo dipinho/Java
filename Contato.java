@@ -2,8 +2,12 @@ package oo;
 
 public class Contato {
 	private String nome;
-	private Endereco endereco;
-	private Telefone[] telefones;
+	private String email;
+	private String telefone;
+	
+	
+	public Contato() {
+	}
 	
 	public String getNome() {
 		return nome;
@@ -11,19 +15,23 @@ public class Contato {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	public Endereco getEndereco() {
-		return endereco;
+	public String getEmail() {
+		return email;
 	}
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public Telefone[] getTelefones() {
-		return telefones;
+	public String getTelefone() {
+		return telefone;
 	}
-	public void setTelefones(Telefone[] telefones) {
-		this.telefones = telefones;
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
 	}
-	
+		
+	public String obterInfo() {
+		return "Nome = " + this.nome +
+				"Telefone = " + this.telefone +
+				"email = " + this.email;
+	}
 	
 }
